@@ -1,0 +1,84 @@
+.wwl-btn-link {
+	text-decoration: underline;
+	min-width: 80px;
+}
+
+.wwl-btn-btn {
+	background-color: #0274be; /* Green */
+	border: none;
+	color: white;
+	padding: 5px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	border-radius: 2px;
+	cursor: pointer;
+  }
+
+.wwl-btn-hide {
+	display: none;
+}
+
+.wwl-btn-btn a{
+	color: white;
+}
+
+.wwl-btn-btn:hover {
+	background-color: #515151; /* Green */
+	color: white;
+}
+
+.wwl-active{
+	display: block;
+}
+
+.wwl-hide{
+	display: none;
+}
+
+.wwl-table td {
+	text-align: center;
+}
+
+.wwl-table img {
+	height: 100px;
+	max-width: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wwl-atc {
+	background-color: #0275d8;
+	color: white;
+	padding: 10px;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+
+.wwl-atc:hover {
+	background-color: #0467bd;
+	color: white;
+}
+
+.wwl-rfc {
+	background-color: #bbbbbb;
+	color: white;
+	padding: 10px;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+
+.wwl-rfc:hover {
+	background-color: #7e7e7e;
+	color: white;
+}
+
+.wwl-table-titles {
+	font-weight: bold;
+}
+
+.wwl-rfc-btn {
+	cursor: pointer;
+}
