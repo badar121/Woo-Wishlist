@@ -1,0 +1,15 @@
+{
+    "name": "badar/woo-wishlist",
+    "description": "A simple yet powerful wishlist plugin for WordPress.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Badar Shahbaz",
+            "email": "badarbutt121@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"Includes\\": "./includes"}
+    }
+}
