@@ -35,23 +35,25 @@ window.addEventListener('DOMContentLoaded', (e) => {
 		if(document.querySelector('.wwl-rfc-btn')){
 			let wowlBtns = document.querySelectorAll('.wwl-rfc-btn');
 			for(var i = 0; i<wowlBtns.length; i++) {
-				e.preventDefault();
-				let productId = e.target.getAttribute("data-product");
-				
-				let formData = new FormData();
-				formData.append('action', 'sbwl_remove_from_wishlist');
-				formData.append('user_id', opts.userId);
-				formData.append('product_id', productId);
-				fetch(opts.ajaxUrl, {
-					method: 'POST',
-					body: formData
-				}).then(function (response) {
-					if(response) {
-						document.getElementById(productId).innerHTML = '';
-					}
+				wowlBtns[i].addEventListener('click', (e) => {
+					e.preventDefault();
+					let productId = e.target.getAttribute("data-product");
+
+					let formData = new FormData();
+					formData.append('action', 'sbwl_remove_from_wishlist');
+					formData.append('user_id', opts.userId);
+					formData.append('product_id', productId);
+					fetch(opts.ajaxUrl, {
+						method: 'POST',
+						body: formData
+					}).then(function (response) {
+						if(response) {
+							document.getElementById(productId).innerHTML = '';
+						}
+					});
 				});
 			}
 		}
+
 	}
-	
 });
