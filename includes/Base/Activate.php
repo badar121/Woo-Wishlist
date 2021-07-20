@@ -24,4 +24,5 @@ if ( ! class_exists( 'Activate' ) ) {
 				wp_insert_post( $args );
 			}
 		}
+	}
 }
