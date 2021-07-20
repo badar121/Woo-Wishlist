@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 				let productId = e.target.getAttribute("data-product");
 				
 				let formData = new FormData();
-				formData.append('action', 'sbwl_add_to_wishlist');
+				formData.append('action', 'wowl_add_to_wishlist');
 				formData.append('user_id', opts.userId);
 				formData.append('product_id', productId);
 				fetch(opts.ajaxUrl, {
@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 					let productId = e.target.getAttribute("data-product");
 
 					let formData = new FormData();
-					formData.append('action', 'sbwl_remove_from_wishlist');
+					formData.append('action', 'wowl_remove_from_wishlist');
 					formData.append('user_id', opts.userId);
 					formData.append('product_id', productId);
 					fetch(opts.ajaxUrl, {

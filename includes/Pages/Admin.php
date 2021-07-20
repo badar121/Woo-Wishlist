@@ -26,15 +26,15 @@ class Admin {
 
 	public function set_pages() {
 		$this->pages = array(
-		  array(
-			'page_title'	=> __( 'SB Wishlist' , 'woo-wishlist'),
-			'menu_title'	=> 'SB Wishlist',
+		array(
+			'page_title'	=> __( 'Woo Wishlist' , 'woo-wishlist'),
+			'menu_title'	=> 'Woo Wishlist',
 			'capability'	=> 'manage_options',
-			'menu_slug'		=> 'sb_wishlist',
+			'menu_slug'		=> 'woo_wishlist',
 			'callback'		=> array( $this, 'plugin_page' ),
 			'icon_url'		=> 'dashicons-heart',
 			'position'		=> 58,
-		  )
+		)
 		);
 	}
 

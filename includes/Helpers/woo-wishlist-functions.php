@@ -13,7 +13,7 @@
 * @param string $default default text if it's not found
 * @return mixed
 */
-function sbwl_get_option( $option, $section, $default = '' ) {
+function wowl_get_option( $option, $section, $default = '' ) {
 	$options = get_option( $section );
 	if ( isset( $options[$option] ) ) {
 	return $options[$option];
@@ -57,7 +57,7 @@ add_action( 'woocommerce_add_to_cart', 'sbwl_add_to_cart', 10, 2 );
 function wwl_wishlist_shortcode() {
 	ob_start();
 	$sbwl_user_wl		= get_user_meta( get_current_user_id(), 'wishlist', true );
-	$sbwl_table_opts	= sbwl_get_option( 'page_option_table_show', 'woo_page_opt_section' );
+	$sbwl_table_opts	= wowl_get_option( 'page_option_table_show', 'woo_page_opt_section' );
 
 	if ( empty( $sbwl_user_wl ) ) {
 		echo '<h2>Wishlist is empty.</h2>';
@@ -122,7 +122,7 @@ function wwl_wishlist_shortcode() {
 			<?php if ( 'simple' == $sbwl_product->get_type() ) : ?>
 				<td>
 				<?php 
-					echo '<a class="wwl-atc" href="'. $sbwl_product->add_to_cart_url() .'&redirect-to-cart='. sbwl_get_option( 'page_option_redirect', 'woo_page_opt_section' ) .'&remove-from-wishlist='. sbwl_get_option( 'page_option_remove', 'woo_page_opt_section' ) .'">Add to Cart</a>';
+					echo '<a class="wwl-atc" href="'. $sbwl_product->add_to_cart_url() .'&redirect-to-cart='. wowl_get_option( 'page_option_redirect', 'woo_page_opt_section' ) .'&remove-from-wishlist='. wowl_get_option( 'page_option_remove', 'woo_page_opt_section' ) .'">Add to Cart</a>';
 				?>
 				</td>
 			<?php endif; ?>
@@ -132,7 +132,7 @@ function wwl_wishlist_shortcode() {
 			?>
 				<td>
 				<?php 
-					echo '<a class="wwl-atc" href="'. $url .'?remove-from-wishlist='. sbwl_get_option( 'page_option_remove', 'woo_page_opt_section' ) .'">Add to Cart</a>';
+					echo '<a class="wwl-atc" href="'. $url .'?remove-from-wishlist='. wowl_get_option( 'page_option_remove', 'woo_page_opt_section' ) .'">Add to Cart</a>';
 				?>
 				</td>
 			<?php endif; ?>
@@ -142,7 +142,7 @@ function wwl_wishlist_shortcode() {
 			?>
 				<td>
 				<?php 
-					echo '<a class="wwl-atc" href="'. $url .'?redirect-to-cart='. sbwl_get_option( 'page_option_redirect', 'woo_page_opt_section' ) .'&remove-from-wishlist='. sbwl_get_option( 'page_option_remove', 'woo_page_opt_section' ) .'">Add to Cart</a>';
+					echo '<a class="wwl-atc" href="'. $url .'?redirect-to-cart='. wowl_get_option( 'page_option_redirect', 'woo_page_opt_section' ) .'&remove-from-wishlist='. wowl_get_option( 'page_option_remove', 'woo_page_opt_section' ) .'">Add to Cart</a>';
 				?>
 				</td>
 			<?php endif; ?>

@@ -7,10 +7,10 @@
  /**
  * Passed with ajax request to add a product to Wishlist.
  * 
- * @package SbWl
+ * @package woo-wishlist
  * @since 1.0
  */
-function sbwl_add_to_wishlist() {
+function wowl_add_to_wishlist() {
 	$user_id	= (int) $_POST['user_id'];
 	$product_id	= (int) $_POST['product_id'];
 	$meta		= get_user_meta( $user_id, 'wishlist', true );
@@ -25,16 +25,16 @@ function sbwl_add_to_wishlist() {
 	update_user_meta( $user_id, 'wishlist', $meta );
 	wp_send_json_success( $meta );
 }
-add_action( 'wp_ajax_sbwl_add_to_wishlist', 'sbwl_add_to_wishlist' );
+add_action( 'wp_ajax_wowl_add_to_wishlist', 'wowl_add_to_wishlist' );
 
 
 /**
  * Passed with ajax request to remove a product from Wishlist.
  * 
- * @package SbWl
+ * @package woo-wishlist
  * @since 1.0
  */
-function sbwl_remove_from_wishlist() {
+function wowl_remove_from_wishlist() {
 	$user_id		= (int) $_POST['user_id'];
 	$product_id		= (int) $_POST['product_id'];
 	$sbwl_user_wl	= get_user_meta( $user_id, 'wishlist', true );
@@ -47,4 +47,4 @@ function sbwl_remove_from_wishlist() {
 	}
 	wp_send_json_success( $sbwl_user_wl );
 }
-add_action( 'wp_ajax_sbwl_remove_from_wishlist', 'sbwl_remove_from_wishlist' );
+add_action( 'wp_ajax_wowl_remove_from_wishlist', 'wowl_remove_from_wishlist' );

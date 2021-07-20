@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Woo Wishlist
-Description: Woo Wishlist is Wishlist Plugin, which adds wishlist functionalities in Woocommerce website.
+Description: Woo Wishlist is Wishlist Plugin.
 Version: 1.0
 Author: Badar Shahbaz
 License: GPLv3
