@@ -153,6 +153,54 @@ function wwl_wishlist_shortcode() {
 
 	</table>
 	<?php
+		$wowl_share			= wowl_get_option( 'page_option_social_share', 'woo_page_opt_section' );
+		$wowl_share_opts	= wowl_get_option( 'page_option_share', 'woo_page_opt_section' );
+		$wowl_share_title	= wowl_get_option( 'page_option_share_title', 'woo_page_opt_section' );
+		$wowl_page_id		= wowl_get_option( 'page_option_select', 'woo_page_opt_section' );
+		$wowl_page_link		= get_permalink( $wowl_page_id );
+		$wowl_wa_url = '';
+		if ( wp_is_mobile() ) {
+			$wowl_wa_url = 'whatsapp://send?text=' . $wowl_share_title . '-' . urlencode( $wowl_page_link );
+		} else {
+			$wowl_wa_url = 'https://web.whatsapp.com/send?text=' . $wowl_share_title . '-' . urlencode( $wowl_page_link );
+		}
+
+		if ( 'on' === $wowl_share ) {
+		?>
+		<h4 class="sbwl-share-title">Share on:</h4>
+		<ul class="sbwl-share">
+			<?php if ( !empty( $wowl_share_opts['facebook'] ) ): ?>
+				<li>
+					<a target="_blank" rel="noopener" class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo urlencode( $wowl_share_title ); ?>&p[title]=<?php echo esc_attr( $wowl_share_title ); ?>" title="<?php esc_html_e( 'Facebook', 'woo-whislist' ); ?>">
+					<img class="wowl-si"  src= '<?php echo WWL_PLUGIN_URL; ?>assets/images/facebook.svg'>
+					</a>
+				</li>
+			<?php endif; ?>
+			<?php if ( !empty( $wowl_share_opts['twitter'] ) ): ?>
+				<li>
+					<a target="_blank" rel="noopener" class="twitter" href="https://twitter.com/share?url=<?php echo urlencode( $wowl_share_title ); ?>" title="<?php esc_html_e( 'Twitter', 'woo-whislist' ); ?>">
+					<img class="wowl-si"  src= '<?php echo WWL_PLUGIN_URL; ?>assets/images/twitter.svg'> 
+					</a>
+				</li>
+			<?php endif; ?>
+			<?php if ( !empty( $wowl_share_opts['pinterest'] ) ): ?>
+				<li>
+					<a href="">
+					<img class="wowl-si"  src= '<?php echo WWL_PLUGIN_URL; ?>assets/images/pinterest.svg'> 
+					</a>
+				</li>
+			<?php endif; ?>
+			<?php if ( !empty( $wowl_share_opts['whatsapp'] ) ): ?>
+				<li>
+					<a href="<?php echo esc_attr( $wowl_wa_url ); ?>" data-action="share/whatsapp/share" target="_blank" rel="noopener" title="<?php esc_html_e( 'WhatsApp', 'woo-wishlist' ); ?>">
+					<img class="wowl-si" src= '<?php echo WWL_PLUGIN_URL; ?>assets/images/whatsapp.svg'> 
+					</a>
+				</li>
+			<?php endif; ?>
+
+		</ul>
+		<?php
+		}
 	return ob_get_clean();
 }
 add_shortcode( 'wwl_wishlist_shortcode', 'wwl_wishlist_shortcode' );

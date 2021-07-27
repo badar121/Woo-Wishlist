@@ -71,19 +71,19 @@ class Admin {
 		$sections = array(
 			[
 				'id'    => 'sbwl_general_section',
-				'title' => __( 'GENERAL SETTINGS', 'sb-woo-whislist' )
+				'title' => __( 'GENERAL SETTINGS', 'woo-whislist' )
 			],
 			[
 				'id'    => 'sbwl_add_section',
-				'title' => __( 'ADD TO WISHLIST OPTIONS', 'sb-woo-whislist' )
+				'title' => __( 'ADD TO WISHLIST OPTIONS', 'woo-whislist' )
 			],
 			[
 				'id'    => 'sbwl_stylecolor_section',
-				'title' => __( 'STYLE & COLOR', 'sb-woo-whislist' )
+				'title' => __( 'STYLE & COLOR', 'woo-whislist' )
 			],
 			[
 				'id'    => 'woo_page_opt_section',
-				'title' => __( 'WISHLIST PAGE OPTIONS', 'sb-woo-whislist' )
+				'title' => __( 'WISHLIST PAGE OPTIONS', 'woo-whislist' )
 			],
 		);
 		return $sections;
@@ -99,23 +99,23 @@ class Admin {
 			'sbwl_general_section' => array(
 				array(
 					'name'		=> 'enable_ajax_loading',
-					'label'		=> __( 'Enable Ajax loading', 'sb-woo-whislist' ),
-					'desc'		=> __( 'Load any cacheable wishlist item via AJAX', 'sb-woo-whislist' ),
+					'label'		=> __( 'Enable Ajax loading', 'woo-whislist' ),
+					'desc'		=> __( 'Load any cacheable wishlist item via AJAX', 'woo-whislist' ),
 					'default'	=> 'off',
 					'type'		=> 'checkbox',
 				),
 				array(
 					'name'		=> 'reset_defaults',
-					'label'		=> __( 'Reset Defaults', 'sb-woo-whislist' ),
-					'desc'		=> __( 'Check this box to reset the default settings', 'sb-woo-whislist' ),
+					'label'		=> __( 'Reset Defaults', 'woo-whislist' ),
+					'desc'		=> __( 'Check this box to reset the default settings', 'woo-whislist' ),
 					'type'		=> 'checkbox',
 				),
 			),
 			'sbwl_add_section' => array(
 				array(
 					'name'		=> 'after_product_added',
-					'label'		=> __('After product is added to wishlist', 'sb-woo-whislist'),
-					'desc'		=> __('', 'sb-woo-whislist'),
+					'label'		=> __('After product is added to wishlist', 'woo-whislist'),
+					'desc'		=> __('', 'woo-whislist'),
 					'type'		=> 'radio',
 					'default'	=> 'wwl-btn-hide',
 					'options'	=> array(
@@ -126,27 +126,27 @@ class Admin {
 				),
 				array(
 					'name'		=> 'loop_settings_text',
-					'label'		=> __('<h2 style="font-weight: 700;">Loop Settings</h2>', 'sb-woo-whislist'),
+					'label'		=> __('<h2 style="font-weight: 700;">Loop Settings</h2>', 'woo-whislist'),
 					'desc'		=> __('Loop options will be visible on Shop page, category pages, product shortcodes,
 								 products sliders, and all the other places where the WooCommerce products’ loop is used',
-								'sb-woo-whislist'),
+								'woo-whislist'),
 					'type'		=> 'html',
 				),
 				array(
 					'name'		=> 'loop_settings',
-					'label'		=> __( 'Show "Add to wishlist" in loop', 'sb-woo-whislist' ),
+					'label'		=> __( 'Show "Add to wishlist" in loop', 'woo-whislist' ),
 					'desc'		=> __( 'Enable the "Add to wishlist" feature in WooCommerce product\'s loop' ),
 					'type'		=> 'checkbox',
 				),
 				array(
 					'name'	=> 'product_page_settings_text',
-					'label'	=> __('<h2 style="font-weight: 700;">Product page settings</h2>', 'sb-woo-whislist'),
+					'label'	=> __('<h2 style="font-weight: 700;">Product page settings</h2>', 'woo-whislist'),
 					'type'	=> 'html',
 				),
 				array(
 					'name'		=> 'product_page_settings',
-					'label'		=> __('Position of "Add to wishlist" on product page', 'sb-woo-whislist'),
-					'desc'		=> __('Choose where to show "Add to wishlist" button or link on the product page.', 'sb-woo-whislist'),
+					'label'		=> __('Position of "Add to wishlist" on product page', 'woo-whislist'),
+					'desc'		=> __('Choose where to show "Add to wishlist" button or link on the product page.', 'woo-whislist'),
 					'type'		=> 'select',
 					'default'	=> 'after_add_to_cart',
 					'options' 	=> array(
@@ -157,34 +157,34 @@ class Admin {
 				),
 				array(
 					'name'		=> 'text_customization_text',
-					'label'		=> __('<h2 style="font-weight: 700;">Text Customization</h2>', 'sb-woo-whislist'),
+					'label'		=> __('<h2 style="font-weight: 700;">Text Customization</h2>', 'woo-whislist'),
 					'type'		=> 'html',
 				),
 				array(
 					'name'		=> 'text_customization_field_1',
-					'label'		=> __('"Add to wishlist" text', 'sb-woo-whislist'),
-					'desc'		=> __('Enter a text for "Add to wishlist" button', 'sb-woo-whislist'),
+					'label'		=> __('"Add to wishlist" text', 'woo-whislist'),
+					'desc'		=> __('Enter a text for "Add to wishlist" button', 'woo-whislist'),
 					'type'		=> 'text',
 					'default'	=>'Add to wishlist',
 				),
 				array(
 					'name'		=> 'text_customization_field_2',
-					'label'		=> __('"Product added" text', 'sb-woo-whislist'),
-					'desc'		=> __('Enter the text of the message displayed when the user adds a product to the wishlist', 'sb-woo-whislist'),
+					'label'		=> __('"Product added" text', 'woo-whislist'),
+					'desc'		=> __('Enter the text of the message displayed when the user adds a product to the wishlist', 'woo-whislist'),
 					'type'		=> 'text',
 					'default' 	=> 'Product added!',
 				),
 				array(
 					'name'		=> 'text_customization_field_3',
-					'label'		=> __('"Browse wishlist" text', 'sb-woo-whislist'),
-					'desc'		=> __('Enter a text for the "Browse wishlist" link on the product page', 'sb-woo-whislist'),
+					'label'		=> __('"Browse wishlist" text', 'woo-whislist'),
+					'desc'		=> __('Enter a text for the "Browse wishlist" link on the product page', 'woo-whislist'),
 					'type'		=> 'text',
 					'default'	=> 'Browse Wishlist',
 				),
 				array(
 					'name'		=> 'text_customization_field_4',
-					'label'		=> __('"Product already in wishlist" text', 'sb-woo-whislist'),
-					'desc'		=> __('Enter the text for the message displayed when the user views a product that is already in the wishlist', 'sb-woo-whislist'),
+					'label'		=> __('"Product already in wishlist" text', 'woo-whislist'),
+					'desc'		=> __('Enter the text for the message displayed when the user views a product that is already in the wishlist', 'woo-whislist'),
 					'type'		=> 'text',
 					'default'	=> 'The product is already in your wishlist!',
 				),
@@ -192,8 +192,8 @@ class Admin {
 			'sbwl_stylecolor_section' => array(
 				array(
 					'name'		=> 'snc_add_wishlist_style',
-					'label'		=> __('Style of "Add to wishlist"', 'sb-woo-whislist'),
-					'desc'		=> __('Choose if you want to show a textual "Add to wishlist" link or a button', 'sb-woo-whislist'),
+					'label'		=> __('Style of "Add to wishlist"', 'woo-whislist'),
+					'desc'		=> __('Choose if you want to show a textual "Add to wishlist" link or a button', 'woo-whislist'),
 					'type'		=> 'select',
 					'default'	=> 'wl-btn-link',
 					'options'	=> array(
@@ -204,8 +204,8 @@ class Admin {
 				),
 				array(
 					'name'		=> 's&c_add_wishlist_icon',
-					'label'		=> __('"Add to wishlist" icon', 'sb-woo-whislist'),
-					'desc'		=> __('Select an icon for the "Add to wishlist" button (optional)', 'sb-woo-whislist'),
+					'label'		=> __('"Add to wishlist" icon', 'woo-whislist'),
+					'desc'		=> __('Select an icon for the "Add to wishlist" button (optional)', 'woo-whislist'),
 					'type'		=> 'select',
 					'default'	=> 'cart',
 					'options'	=> array(
@@ -216,8 +216,8 @@ class Admin {
 				),
 				array(
 					'name'		=> 's&c_added_wishlist_icon',
-					'label'		=> __('"Added to wishlist" icon', 'sb-woo-whislist'),
-					'desc'		=> __('Select an icon for the "Added to wishlist" button (optional)', 'sb-woo-whislist'),
+					'label'		=> __('"Added to wishlist" icon', 'woo-whislist'),
+					'desc'		=> __('Select an icon for the "Added to wishlist" button (optional)', 'woo-whislist'),
 					'type'		=> 'select',
 					'default'	=> '1',
 					'options'	=> array(
@@ -228,27 +228,27 @@ class Admin {
 				),
 				array(
 					'name'		=> 's&c_custom_css',
-					'label'		=> __( 'Custom CSS', 'sb-woo-whislist' ),
-					'desc'		=> __( 'Enter custom CSS to be applied to Wishlist elements (optional)', 'sb-woo-whislist' ),
+					'label'		=> __( 'Custom CSS', 'woo-whislist' ),
+					'desc'		=> __( 'Enter custom CSS to be applied to Wishlist elements (optional)', 'woo-whislist' ),
 					'type'		=> 'textarea',
 				),
 			),
 			'woo_page_opt_section' => array(
 				array(
 					'name'		=> 'page_option_title',
-					'label'		=> __('<h2 style="font-weight: 700;">All your wishlists</h2>', 'sb-woo-whislist'),
+					'label'		=> __('<h2 style="font-weight: 700;">All your wishlists</h2>', 'woo-whislist'),
 					'type'		=> 'html',
 				),
 				array(
 					'name'		=> 'page_option_select',
-					'label'		=> __('Wishlist page', 'sb-woo-whislist'),
-					'desc'		=> __('Pick a page as the main Wishlist page; make sure you add the [wl_shortcode_page] shortcode into the page content', 'sb-woo-whislist'),
+					'label'		=> __('Wishlist page', 'woo-whislist'),
+					'desc'		=> __('Pick a page as the main Wishlist page; make sure you add the [wl_shortcode_page] shortcode into the page content', 'woo-whislist'),
 					'type'		=> 'select',
 					'options'	=> $this->get_pages(),
 				),
 				array(
 					'name'		=> 'page_option_detail_page',
-					'label'		=> __('<h2 style="font-weight: 700;">Wishlist Detail Page</h2>', 'sb-woo-whislist'),
+					'label'		=> __('<h2 style="font-weight: 700;">Wishlist Detail Page</h2>', 'woo-whislist'),
 					'type'		=> 'html',
 				),
 				array(
@@ -268,22 +268,22 @@ class Admin {
 				),
 				array(
 					'name'		=> 'page_option_redirect',
-					'label'		=> __( 'Redirect to cart', 'sb-woo-whislist' ),
-					'desc'		=> __( 'Redirect users to the cart page when they add a product to the cart from the wishlist page', 'sb-woo-whislist' ),
+					'label'		=> __( 'Redirect to cart', 'woo-whislist' ),
+					'desc'		=> __( 'Redirect users to the cart page when they add a product to the cart from the wishlist page', 'woo-whislist' ),
 					'default'	=> 'off',
 					'type'		=> 'checkbox',
 				),
 				array(
 					'name'		=> 'page_option_remove',
-					'label'		=> __( 'Remove if added to the cart', 'sb-woo-whislist' ),
-					'desc'		=> __( 'Remove the product from the wishlist after it has been added to the cart', 'sb-woo-whislist' ),
+					'label'		=> __( 'Remove if added to the cart', 'woo-whislist' ),
+					'desc'		=> __( 'Remove the product from the wishlist after it has been added to the cart', 'woo-whislist' ),
 					'default'	=> 'off',
 					'type'		=> 'checkbox',
 				),
 				array(
 					'name'		=> 'page_option_social_share',
-					'label'		=> __( 'Share wishlist', 'sb-woo-whislist' ),
-					'desc'		=> __( 'Enable this option to let users share their wishlist on social media', 'sb-woo-whislist' ),
+					'label'		=> __( 'Share wishlist', 'woo-whislist' ),
+					'desc'		=> __( 'Enable this option to let users share their wishlist on social media', 'woo-whislist' ),
 					'default'	=> 'off',
 					'type'		=> 'checkbox',
 				),
@@ -302,33 +302,33 @@ class Admin {
 				),
 				array(
 					'name'		=> 'page_option_share_title',
-					'label'		=> __('Sharing title', 'sb-woo-whislist'),
-					'desc'		=> __('Wishlist title used for sharing (only used on Twitter and Pinterest)', 'sb-woo-whislist'),
+					'label'		=> __('Sharing title', 'woo-whislist'),
+					'desc'		=> __('Wishlist title used for sharing (only used on Twitter and Pinterest)', 'woo-whislist'),
 					'type'		=> 'text',
 					'default'	=> 'My Wishlist',
 				),
 				array(
 					'name'		=> 'page_option_share_link',
-					'label'		=> __('Social image URL', 'sb-woo-whislist'),
-					'desc'		=> __('It will be used to pin the wishlist on Pinterest." button', 'sb-woo-whislist'),
+					'label'		=> __('Social image URL', 'woo-whislist'),
+					'desc'		=> __('It will be used to pin the wishlist on Pinterest." button', 'woo-whislist'),
 					'type'		=> 'url',
 				),
 				array(
 					'name'		=> 'page_option_text_customization',
-					'label'		=> __('<h2 style="font-weight: 700;">Text Customization</h2>', 'sb-woo-whislist'),
+					'label'		=> __('<h2 style="font-weight: 700;">Text Customization</h2>', 'woo-whislist'),
 					'type'		=> 'html',
 				),
 				array(
 					'name'		=> 'page_option_wishlist_name',
-					'label'		=> __('Default wishlist name', 'sb-woo-whislist'),
-					'desc'		=> __('Enter a name for the default wishlist. This is the wishlist that will be automatically generated for all users if they do not create any custom one', 'sb-woo-whislist'),
+					'label'		=> __('Default wishlist name', 'woo-whislist'),
+					'desc'		=> __('Enter a name for the default wishlist. This is the wishlist that will be automatically generated for all users if they do not create any custom one', 'woo-whislist'),
 					'type'		=> 'text',
 					'default'	=> 'My wishlist',
 				),
 				array(
 					'name'		=> 'page_option_cart_name',
-					'label'		=> __('"Add to cart" text', 'sb-woo-whislist'),
-					'desc'		=> __('Enter a text for the "Add to cart" button', 'sb-woo-whislist'),
+					'label'		=> __('"Add to cart" text', 'woo-whislist'),
+					'desc'		=> __('Enter a text for the "Add to cart" button', 'woo-whislist'),
 					'type'		=> 'text',
 					'default'	=> 'Add to cart',
 				),
