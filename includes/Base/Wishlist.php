@@ -23,7 +23,7 @@ if ( ! class_exists( 'Wishlist' ) ) {
 			$this->wowl_btn_icon	= wowl_get_option( 's&c_add_wishlist_icon', 'wowl_stylecolor_section', 'cart' );
 			$this->wowl_btn_text	= wowl_get_option( 'text_customization_field_1', 'wowl_add_section', 'Add to wishlist');
 			$this->wowl_btn_pos		= wowl_get_option( 'product_page_settings', 'wowl_add_section', 'Add to wishlist');
-			$this->wowl_page_id		= wowl_get_option( 'page_option_select', 'woo_page_opt_section' );
+			$this->wowl_page_id		= wowl_get_option( 'page_option_select', 'wowl_page_opt_section' );
 			$this->wowl_user_id		= get_current_user_id();
 
 			// Enable/Disable wishlist button in shop loop.

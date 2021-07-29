@@ -69,20 +69,20 @@ class Admin {
 	 */
 	public function get_settings_sections() {
 		$sections = array(
+			// [
+			// 	'id'    => 'wowl_general_section',
+			// 	'title' => __( 'GENERAL SETTINGS', 'woo-whislist' )
+			// ],
 			[
-				'id'    => 'sbwl_general_section',
-				'title' => __( 'GENERAL SETTINGS', 'woo-whislist' )
-			],
-			[
-				'id'    => 'sbwl_add_section',
+				'id'    => 'wowl_add_section',
 				'title' => __( 'ADD TO WISHLIST OPTIONS', 'woo-whislist' )
 			],
 			[
-				'id'    => 'sbwl_stylecolor_section',
+				'id'    => 'wowl_stylecolor_section',
 				'title' => __( 'STYLE & COLOR', 'woo-whislist' )
 			],
 			[
-				'id'    => 'woo_page_opt_section',
+				'id'    => 'wowl_page_opt_section',
 				'title' => __( 'WISHLIST PAGE OPTIONS', 'woo-whislist' )
 			],
 		);
@@ -96,22 +96,22 @@ class Admin {
 	 */
 	public function get_settings_fields() {
 		$setting_fields = array(
-			'sbwl_general_section' => array(
-				array(
-					'name'		=> 'enable_ajax_loading',
-					'label'		=> __( 'Enable Ajax loading', 'woo-whislist' ),
-					'desc'		=> __( 'Load any cacheable wishlist item via AJAX', 'woo-whislist' ),
-					'default'	=> 'off',
-					'type'		=> 'checkbox',
-				),
-				array(
-					'name'		=> 'reset_defaults',
-					'label'		=> __( 'Reset Defaults', 'woo-whislist' ),
-					'desc'		=> __( 'Check this box to reset the default settings', 'woo-whislist' ),
-					'type'		=> 'checkbox',
-				),
-			),
-			'sbwl_add_section' => array(
+			// 'wowl_general_section' => array(
+			// 	array(
+			// 		'name'		=> 'enable_ajax_loading',
+			// 		'label'		=> __( 'Enable Ajax loading', 'woo-whislist' ),
+			// 		'desc'		=> __( 'Load any cacheable wishlist item via AJAX', 'woo-whislist' ),
+			// 		'default'	=> 'off',
+			// 		'type'		=> 'checkbox',
+			// 	),
+			// 	array(
+			// 		'name'		=> 'reset_defaults',
+			// 		'label'		=> __( 'Reset Defaults', 'woo-whislist' ),
+			// 		'desc'		=> __( 'Check this box to reset the default settings', 'woo-whislist' ),
+			// 		'type'		=> 'checkbox',
+			// 	),
+			// ),
+			'wowl_add_section' => array(
 				array(
 					'name'		=> 'after_product_added',
 					'label'		=> __('After product is added to wishlist', 'woo-whislist'),
@@ -189,7 +189,7 @@ class Admin {
 					'default'	=> 'The product is already in your wishlist!',
 				),
 			),
-			'sbwl_stylecolor_section' => array(
+			'wowl_stylecolor_section' => array(
 				array(
 					'name'		=> 'snc_add_wishlist_style',
 					'label'		=> __('Style of "Add to wishlist"', 'woo-whislist'),
@@ -233,7 +233,7 @@ class Admin {
 					'type'		=> 'textarea',
 				),
 			),
-			'woo_page_opt_section' => array(
+			'wowl_page_opt_section' => array(
 				array(
 					'name'		=> 'page_option_title',
 					'label'		=> __('<h2 style="font-weight: 700;">All your wishlists</h2>', 'woo-whislist'),
@@ -341,8 +341,8 @@ class Admin {
 	/**
 	 * Contains the code that will be rendered on admin page.
 	 * 
-	 * @package SbWl
-	 * @since 1.0
+	 * @package woo-wishlist
+	 * @since 1.0.0
 	 */
 	function plugin_page() {
 		echo '<div class="wrap">';
