@@ -12,10 +12,10 @@ if ( ! class_exists( 'Activate' ) ) {
 
 			self::set_default_setting();
 			global $wpdb;
-			$wowl_query = "SELECT * FROM `wp_posts` WHERE `post_content` = '[wwl_wishlist_shortcode]'";
+			$wowl_query = "SELECT `post_content` FROM `wp_posts` WHERE `post_content` = '[wwl_wishlist_shortcode]'";
 		
 			// Create Wishlist page if it don't exist.
-			if ( null === $wpdb->get_row( $wowl_query ) ) {
+			if ( empty( $wpdb->query( $wowl_query ) ) ) {
 				$args = array(
 					'post_title'	=>	__( 'Wishlist', 'woo-wishlist' ),
 					'post_status'	=>	__( 'publish', 'woo-wishlist' ),
